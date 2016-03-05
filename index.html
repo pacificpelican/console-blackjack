@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html><!-- a web page for sf3am/djmblog gaming by Dan McKeown http://danmckeown.info -->
+		<!-- v0.1.7 -->
+		<!-- copyright 2015-2016 Dan McKeown released under MIT license -->
+<head>
+	<title>sf3am gaming - console blackjack</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="ryukyu.css" rel="stylesheet" />
+	<link href="gamestyle.css" rel="stylesheet" />
+	<script type="text/javascript" src="underscore.js"></script>
+	<script type="text/javascript" src="cards.js"></script>
+
+</head>
+<body>
+	<div class="container">
+		<header class="header">
+			<h1>console blackjack from <a href="http://sf3am.com"><b>sf3am.com</b></a> gaming</h1>
+		</header>
+		<main class="main col-lg-9">
+			<h2>Welcome to sf3am console blackjack</h2>
+			<h4><a href="cards.js">This code</a> is used to power online card games at <a href="http://djmblog.com">djmblog.com</a> gaming.</h4>
+			<p>This pages enables command-line blackjack.  Open your JavaScript console [cmd-option-i] to play the game.</p>
+		</main>
+		<div>
+		<code id="snippet1" class="example_code">
+			var a = new matchup('victor','emile');
+		</code>
+		<code id="result1" class="result_code">
+			undefined
+		</code>
+		<code id="snippet2" class="example_code">
+			var b = new blackjack(a);
+		</code>
+		<code id="result2" class="result_code">
+			undefined
+		</code>
+		<code id="snippet3" class="example_code">
+			b.player1.login;
+		</code>
+		<code id="result3" class="result_code">
+			"victor"
+		</code>
+		<code id="snippet3" class="example_code">
+			b.player1.hand;
+		</code>
+		<code id="result3" class="result_code">
+			<i>["6 of hearts", "jack of hearts"]</i>
+		</code>
+		<code id="snippet3" class="example_code">
+			b.player2.hand;
+		</code>
+		<code id="result3" class="result_code">
+			<i>["queen of hearts", "9 of spades"]</i>
+		</code>
+		<code id="snippet3" class="example_code">
+			b.revealFirstCard('player2');
+		</code>
+		<code id="result3" class="result_code">
+			<i>"queen of hearts"</i>
+		</code>
+		<code id="snippet3" class="example_code">
+			b.score('player2')
+		</code>
+		<code id="result3" class="result_code">
+			19
+		</code>
+		<code id="snippet3" class="example_code">
+			b.score('emile');
+		</code>
+		<code id="result3" class="result_code">
+			19
+		</code>
+		<code id="snippet3" class="example_code">
+			b.current.dealt;
+		</code>
+		<code id="result3" class="result_code">
+			<i>[undefined × 31, true, undefined × 4, true, true, undefined × 9, true]</i>
+		</code>
+		<code id="snippet3" class="example_code">
+			b.hitMe('emile');
+		</code>
+		<code id="result3" class="result_code">
+			true
+		</code>
+		<code id="snippet3" class="example_code">
+			b.player2.hand;
+		</code>
+		<code id="result3" class="result_code">
+			<i>["queen of hearts", "9 of spades", "4 of diamonds"]</i>
+		</code>
+		<code id="snippet3" class="example_code">
+			b.score('player2');
+		</code>
+		<code id="result3" class="result_code">
+			false
+		</code>
+		<code id="snippet3" class="example_code">
+			b.hitMe('player1');
+		</code>
+		<code id="result3" class="result_code">
+			true
+		</code>
+		<div>
+		<aside class="sidebar col-lg-2">
+			<p></p>
+		</aside>
+		<footer class="footer">
+			<p>created by <a href="http://danmckeown.info">Dan McKeown</a></p>
+		</footer>
+	</div>
+</body>
+</html>

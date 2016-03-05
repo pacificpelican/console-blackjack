@@ -1,0 +1,16 @@
+/*
+sf3am.com/djmblog.com games code CSS v0.1.7
+Dec. 2015 by Dan McKeown released under MIT license
+*/
+
+code {
+    display: block;
+}
+code.result_code {
+	margin-bottom: 8px;
+    font-size: 14px !important;
+}
+code.sample_code {
+	margin-bottom: 8px;
+    font-size: 1.4rem !important;
+}
