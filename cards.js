@@ -1,7 +1,9 @@
 //  sf3am.com/djmblog.com games code for Console Blackjack
-//  Dec. 2015 by Dan McKeown http://danmckeown.info
-//	v0.1.7
+//  Dec. 2015-April 2016 by Dan McKeown http://danmckeown.info
 //  released under MIT License
+//	v0.2.0
+//  This version requires Immutable.js
+//  https://facebook.github.io/immutable-js/
 
 "use strict";
 
@@ -14,7 +16,7 @@ var playerSet = [];
 
 var deck = class cardSet {
     constructor() {
-        this.cards = [];
+        this.cards = Immutable.List([]);
         this.dealt = [];
         var c = 0;
         for (var j=0; j<suit.length; j++) {
