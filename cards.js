@@ -1,6 +1,6 @@
 //  sf3am.com & djmblog.com games code for Console Blackjack
 //  https://github.com/pacificpelican/console-blackjack
-//	v0.3.0
+//	v0.3.1
 //  Dec. 2015-May 2016 by Dan McKeown http://danmckeown.info
 //  released under MIT License
 //  This code requires Immutable.js
@@ -265,7 +265,7 @@ var blackjack = class twentyone {
 
 	hitMe(player, entropy, callback) {
 		var aCard = this.getAcard();
-		if ((aCard !== false) && (aCard !== 'undefined')) {
+		if ((aCard !== false) && (aCard !== 'undefined') && (aCard !== null)) {
 			if ((player === this.player1.login) || (player === 'player1')) {
 				    //  console.log('now to add the ' + aCard + ' to the hand of ' + player);
 				var player1hand = this.player1.hand
