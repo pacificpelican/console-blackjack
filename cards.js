@@ -1,8 +1,9 @@
-//  sf3am.com/djmblog.com games code for Console Blackjack
-//  Dec. 2015-April 2016 by Dan McKeown http://danmckeown.info
+//  sf3am.com & djmblog.com games code for Console Blackjack
+//  https://github.com/pacificpelican/console-blackjack
+//	v0.3.0
+//  Dec. 2015-May 2016 by Dan McKeown http://danmckeown.info
 //  released under MIT License
-//	v0.2.0
-//  This version requires Immutable.js
+//  This code requires Immutable.js
 //  https://facebook.github.io/immutable-js/
 
 "use strict";
@@ -10,8 +11,7 @@
 var numbers = ['ace','two','three','four','five','six','seven','eight','nine','ten','jack','queen','king'];
 var suit = ['clubs','diamonds','hearts','spades'];
 var deckSize = numbers.length * suit.length;
-var $dealt = [];	//	this is mostly unused in favor of this.current.dealt
-var $thedeck = [];	//	this is mostly unused in favor of this.current.cards
+var $thedeck = [];
 var playerSet = [];
 
 var deck = class cardSet {
@@ -145,10 +145,8 @@ var blackjack = class twentyone {
                 }
                 aceFlag = true;
             }
-        //    console.log('total is ' + total);
         }
 
-            //  console.log('aceFlag: ' + aceFlag + " | aceLow: " + aceLow);
         if (total > 21) {
             console.log('total is over 21... ' + total);
             if ((aceFlag === true) && (aceLow !== true)) {
@@ -206,7 +204,7 @@ var blackjack = class twentyone {
 		if (this.checkCard(numberdigit1) === true) {
 			this.current.dealt[numberdigit1] = true;
 			card1 = this.current.cards[numberdigit1];
-			         //  console.log(numberdigit1 + " : " + card1);
+			$thedeck = this.current.dealt;
 		}
 		return card1;
 	}
@@ -231,7 +229,6 @@ var blackjack = class twentyone {
 			return newCard;
 		}
 		else if ($thedeck.length <= (cardDeck + 2)) {
-            //  console.log('matches current card, do over..')
             return false;
 		}
 		else {
@@ -286,6 +283,7 @@ var blackjack = class twentyone {
 		}
         else {
             var dealtout = this.current.dealt;
+            $thedeck = dealtout;
             var left = this.howmanycards();
             var lefty = left + 1;
             var Dleft = 0;
