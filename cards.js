@@ -1,10 +1,8 @@
 //  sf3am.com & djmblog.com games code for Console Blackjack
 //  https://github.com/pacificpelican/console-blackjack
-//	v0.3.1
-//  Dec. 2015-May 2016 by Dan McKeown http://danmckeown.info
+//	v1.0.0-beta1
+//  Dec. 2015-May 2016-Jan. 2017 by Dan McKeown http://danmckeown.info
 //  released under MIT License
-//  This code requires Immutable.js
-//  https://facebook.github.io/immutable-js/
 
 "use strict";
 
@@ -14,9 +12,9 @@ var deckSize = numbers.length * suit.length;
 var $thedeck = [];
 var playerSet = [];
 
-var deck = class cardSet {
+const deck = class cardSet {
     constructor() {
-        this.cards = Immutable.List([]);
+        this.cards = [];
         this.dealt = [];
         var c = 0;
         for (var j=0; j<suit.length; j++) {
